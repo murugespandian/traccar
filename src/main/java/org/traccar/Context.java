@@ -135,7 +135,7 @@ public final class Context {
         return deviceManager;
     }
 
-    private static ConnectionManager connectionManager;
+    private static ConnectionManager connectionManager=new ConnectionManager();
 
     public static ConnectionManager getConnectionManager() {
         return connectionManager;
@@ -311,8 +311,6 @@ public final class Context {
         }
 
         permissionsManager = new PermissionsManager(dataManager, usersManager);
-
-        connectionManager = new ConnectionManager();
 
         tripsConfig = initTripsConfig();
 
